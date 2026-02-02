@@ -29,29 +29,33 @@ int main () {
     std::cin >> kobo;
 
     // system brain
-    Naira_kobo_rate *= kobo;
+    Naira_kobo_rate *= kobo; // convert from kobo to Naira
     Naira = Naira_kobo_rate;
 
-    kobo_dollar_rate *=kobo;
+    kobo_dollar_rate *=kobo; // convert from kobo to dollar
     dollar = kobo_dollar_rate;
 
-    long double kobo_quarter = kobo;
+    long double kobo_cent =kobo; // convert from kobo to cent
+    kobo_cent /=kobo_cent_rate;
+    cent = kobo_cent;
+
+    long double kobo_quarter = kobo; // convert from kobo to quarter
     kobo_quarter /=kobo_quarter_rate;
     quarter = kobo_quarter;
 
-    long double kobo_dime = kobo;
+    long double kobo_dime = kobo; // convert from kobo to dime
     kobo_dime /= kobo_dime_rate;
     dime = kobo_dime; 
 
-    long double kobo_nickel = kobo;
+    long double kobo_nickel = kobo; // convert from kobo to nickel
     kobo_nickel /=kobo_nickel_rate;
     nickel = kobo_nickel;
 
-    long double kobo_penny =kobo;
+    long double kobo_penny =kobo; // convert from kobo to penny
     kobo_penny /=kobo_penny_rate;
     penny = kobo_penny;
 
-std::cout<<std::endl;
+std::cout<<std::endl; // just space
 std::cout<<std::endl;
 
     // output display 
@@ -59,9 +63,9 @@ std::cout<<std::endl;
     std::cout <<"Naira: " << Naira << "₦"<<std::endl;
     std::cout << "cent: " << cent << "$" <<std::endl;
     std::cout <<"dollars: "<< dollar <<"$" << std::endl;
-    std::cout <<"quarters: " <<quarter << "$" << std::endl;
-    std::cout <<"dimes: "<< dime << "$"<< std::endl;
-    std::cout <<"nickels: "<< nickel <<"$ " << std::endl;
-    std::cout <<"pennies: " << penny<< "p" << std::endl;
+    std::cout <<"quarters: " <<quarter << std::endl;
+    std::cout <<"dimes: "<< dime<< std::endl;
+    std::cout <<"nickels: "<< nickel  << std::endl;
+    std::cout <<"pennies: " << penny << std::endl;
     return 0;
 }

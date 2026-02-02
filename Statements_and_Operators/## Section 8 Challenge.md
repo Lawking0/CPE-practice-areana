@@ -30,4 +30,4 @@ pennies:2
 Feel free to use your own curreny system 
 Also, think of how you might solve the problem using the modulo operator
 
-Have fun and test your
+Have fun and test your program
